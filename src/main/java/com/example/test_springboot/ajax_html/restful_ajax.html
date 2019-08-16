@@ -7,20 +7,21 @@
     <script>
         $.ajax({
             type : "POST",
-            url: "/ws/ajax",
+            url: "http://localhost:8080/ws/ajax",
             data : {
                 title: "Donald Duck", description: "Duckburg"
             },
-            success : function(data,status){
-                alert("Data: " + data + "\nStatus" + status);
-            }
-        });
+            success : function (data, status) {
+                    $("#demo").append("Data: " + data + "\nStatus:" + status);
+                }
+            });
+
     </script>
 
 </head>
 
 <body>
-
+    <p id="demo"></p>
 </body>
 
 </html>
