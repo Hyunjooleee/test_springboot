@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $.ajax({
+            type : "POST",
+            url: "/ws/ajax",
+            data : {
+                title: "Donald Duck", description: "Duckburg"
+            },
+            success : function(data,status){
+                alert("Data: " + data + "\nStatus" + status);
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

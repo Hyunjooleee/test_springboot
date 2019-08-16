@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $.post("http://localhost:8080/ws/post", function (data, status) {
+                    alert("Data: " + typeof data + "\nStatus:" + status);
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <button>Send an HTTP GET request</button>
+</body>
+
+</html>

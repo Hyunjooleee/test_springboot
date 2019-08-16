@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $.get("http://localhost:8080/ws/organizationList",function(data,status){
+            $.each(data, function (index,currentData) {
+                $.each(currentData, function(key, val){
+                    $("#demo").append(key + " : " + val + "<br>");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="demo"></li>
+    </ul>
+</body>
+</html>
